@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORIMA Example Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="index.php" method="post" enctype="multipart/form-data">
+        
+        <img src="/img/Orima_Logo.png" alt="Orima Logo" height="50">
+        <h1>ORIMA Example Survey</h1>
+        <hr>
+
+        <h2>A. Facilities and Services at Your Australian Educational Institution</h2>
+
+        <!-- Question 1 -->
+        <div>
+            <p><strong>1. Did you participate in an Introductory Academic Program (IAP)?</strong></p>
+            <hr>
+            <label><input type="radio" name="iap" value="yes" required> Yes</label><br>
+            <label><input type="radio" name="iap" value="no" required> No</label>
+        </div>
+
+        <!-- Question 2 (Hidden by Default) -->
+        <div id="question2Container" style="display: none;">
+            <label for="question2"><strong>2. Please explain why not?</strong></label>
+            <hr>
+            <textarea name="reason" id="question2" rows="5" cols="60" required></textarea>
+        </div>
+
+        <!-- Question 3 -->
+        <div>
+            <p><strong>3. Please rate your level of agreement with the following statements about your course or research program.</strong></p>
+            <hr>
+            <table  border="1">
+                <tr>
+                    <th>Statement</th>
+                    <th>Strongly Agree (1)</th>
+                    <th>Agree (2)</th>
+                    <th>Neither Agree nor Disagree (3)</th>
+                    <th>Disagree (4)</th>
+                    <th>Strongly Disagree (5)</th>
+                    <th>Don't Know / Not Applicable (6)</th>
+                </tr>
+                <tr>
+                    <td>My course is current</td>
+                    <td><input type="radio" name="current" value="1" required></td>
+                    <td><input type="radio" name="current" value="2"></td>
+                    <td><input type="radio" name="current" value="3"></td>
+                    <td><input type="radio" name="current" value="4"></td>
+                    <td><input type="radio" name="current" value="5"></td>
+                    <td><input type="radio" name="current" value="6"></td>
+                </tr>
+                <tr>
+                    <td>My course is well designed</td>
+                    <td><input type="radio" name="designed" value="1" required></td>
+                    <td><input type="radio" name="designed" value="2"></td>
+                    <td><input type="radio" name="designed" value="3"></td>
+                    <td><input type="radio" name="designed" value="4"></td>
+                    <td><input type="radio" name="designed" value="5"></td>
+                    <td><input type="radio" name="designed" value="6"></td>
+                </tr>
+                <tr>
+                    <td>My course aligns with my learning outcomes</td>
+                    <td><input type="radio" name="aligned" value="1" required></td>
+                    <td><input type="radio" name="aligned" value="2"></td>
+                    <td><input type="radio" name="aligned" value="3"></td>
+                    <td><input type="radio" name="aligned" value="4"></td>
+                    <td><input type="radio" name="aligned" value="5"></td>
+                    <td><input type="radio" name="aligned" value="6"></td>
+                </tr>
+                <tr>
+                    <td>My course has a good balance of theory and practice</td>
+                    <td><input type="radio" name="balance" value="1" required></td>
+                    <td><input type="radio" name="balance" value="2"></td>
+                    <td><input type="radio" name="balance" value="3"></td>
+                    <td><input type="radio" name="balance" value="4"></td>
+                    <td><input type="radio" name="balance" value="5"></td>
+                    <td><input type="radio" name="balance" value="6"></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Question 4 -->
+        <div>
+            <label for="question4"><strong>4. If you did not agree with any of the above statements or if you have suggestions for improvement, please provide details.</strong></label>
+            <hr>
+            <textarea name="improvement" id="question4" rows="5" cols="60" required></textarea>
+        </div>
+
+        <!-- Question 5 -->
+        <div>
+            <p><strong>5. Apart from your family, with whom do you usually spend time in a social setting?</strong></p>
+            <small>(Please select all that apply)</small>
+            <hr>
+            <label><input type="checkbox" name="social_group[]" value="home_country" required> Students from my home country</label><br>
+            <label><input type="checkbox" name="social_group[]" value="intl_students"> Other international students</label><br>
+            <label><input type="checkbox" name="social_group[]" value="study_country"> Students from my study country</label><br>
+            <label><input type="checkbox" name="social_group[]" value="non_students_home"> Non-students from my home country</label><br>
+            <label><input type="checkbox" name="social_group[]" value="non_students_study"> Non-students from my study country</label><br>
+            <label><input type="checkbox" id="otherCheckbox" name="social_group[]" value="other" onclick="toggleOtherInput()"> Other</label><br>
+            <textarea name="social_other" id="comment" rows="3" cols="25"></textarea>
+        </div>
+
+        <!-- Question 6 -->
+        <div>
+            <label for="question6"><strong>6. Which State/Territory do you live in?</strong></label>
+            <hr>
+            <select name="state" id="question6" required>
+                <option value="">Select</option>
+                <option value="ACT">ACT</option>
+                <option value="NSW">NSW</option>
+                <option value="QLD">QLD</option>
+                <option value="SA">SA</option>
+                <option value="VIC">VIC</option>
+                <option value="WA">WA</option>
+            </select>
+        </div>
+
+        <!-- Question 7 -->
+        <div>
+            <p><strong>7. Please enter your postcode</strong></p>
+            <hr>
+            <label for="question7">Postcode:</label>
+            <input type="text" name="postcode" id="question7" pattern="\d{4}" required>
+        </div>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <!-- Link the External JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>

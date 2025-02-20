@@ -1,0 +1,101 @@
+/* Apply a minimalist font and center the form */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Center the form */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Style the table for a minimalist look */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Style the form headings */
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* Style horizontal lines */
+hr {
+    border: none;
+    height: 1px; /* Make it thicker */
+    background-color: #007BFF; /* Change color */
+    margin: 20px 0;
+}
+
+/* Keep questions left-aligned */
+p {
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Keep all form elements aligned to the left */
+div {
+    margin-bottom: 15px;
+}
+
+/* Style radio and checkbox labels */
+label {
+    font-weight: normal;
+    display: block;
+    margin: 5px 0;
+}
+
+/* Style input fields and textarea */
+textarea, input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the submit and reset buttons */
+input[type="submit"], input[type="reset"] {
+    background: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;z
+}
+
+input[type="reset"] {
+    background: #f44336;
+}
+
+input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+input[type="reset"]:hover {
+    background: #d32f2f;
+}
+
+/* Hide the second question initially */
+#question2Container {
+    display: none;
+}
