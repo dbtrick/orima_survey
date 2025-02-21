@@ -1,101 +1,105 @@
-/* Apply a minimalist font and center the form */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Center the form */
+/* Logo */
+img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #555;
+}
+
+/* Form Styling */
 form {
     background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the table for a minimalist look */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-/* Style the form headings */
-h1 {
-    color: #333;
-    text-align: center;
-}
-
-/* Style horizontal lines */
-hr {
-    border: none;
-    height: 1px; /* Make it thicker */
-    background-color: #007BFF; /* Change color */
-    margin: 20px 0;
-}
-
-/* Keep questions left-aligned */
-p {
+/* label {
     font-weight: bold;
-    text-align: left;
-}
-
-/* Keep all form elements aligned to the left */
-div {
-    margin-bottom: 15px;
-}
-
-/* Style radio and checkbox labels */
-label {
-    font-weight: normal;
     display: block;
-    margin: 5px 0;
-}
+    margin: 10px 0 5px;
+} */
 
-/* Style input fields and textarea */
-textarea, input[type="text"], select {
+/* input[type="radio"], 
+input[type="checkbox"] {
+    margin-right: 0px;
+} */
+
+textarea, select, input[type="text"] {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
-/* Style the submit and reset buttons */
-input[type="submit"], input[type="reset"] {
-    background: #007BFF;
-    color: white;
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Buttons */
+button {
     padding: 10px 15px;
     border: none;
-    cursor: pointer;
     border-radius: 5px;
-    margin: 5px;z
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
 }
 
-input[type="reset"] {
-    background: #f44336;
+button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+    margin-right: 10px;
 }
 
-input[type="submit"]:hover {
-    background: #0056b3;
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
 }
 
-input[type="reset"]:hover {
-    background: #d32f2f;
+button:hover {
+    opacity: 0.8;
 }
 
-/* Hide the second question initially */
-#question2Container {
-    display: none;
+i {
+    color: blue;
 }
