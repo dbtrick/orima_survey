@@ -1,2 +1,3 @@
 ### Project Data Architecture Diagram
-![readme-](https://github.com/dbtrick/project01_dbt_snowflake/assets/172040645/c61a9942-bf02-451b-add2-3e94a93bb0b9)
+
+![Image](https://github.com/user-attachments/assets/b7d39e75-7d40-4e0f-8635-89d8060de59a)
