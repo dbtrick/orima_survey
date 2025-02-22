@@ -14,66 +14,73 @@
 
     <form action="http://localhost/orima_survey/backend/submit.php" method="post">
 
-        <label>1. Did you participate in an Introductory Academic Program (IAP)? </label><br>
-    <input type="radio" name="question1" id="qyes" value="yes">
-    <label for="question1">Yes</label><br>
-    <input type="radio" name="question1" id="qno">
-    <label for="question1">No</label><br><br>
+       <div>
+        <label>1. Did you participate in an Introductory Academic Program (IAP)?</label><br>
+        <label><input type="radio" name="question1" value="yes" required> Yes</label><br>
+        <label><input type="radio" name="question1" value="no" required> No</label>
+    </div>
 
-    <label for="reason1">2. If not, why?</label><br>
-    <textarea name="reason1" id="reason1"></textarea><br><br>
+    <!-- Question 2 (Hidden by Default) -->
+    <div id="question2Container" style="display: none;">
+        <label for="reason1">2. Please explain why not?</label>
+        <textarea name="reason1" id="reason1"></textarea>
+    </div><br>
 
-    <label>3. Please rate your level of agreement with the following statements about your course or research program.</label>
-        <table  border="1">
-            <tr>
-                <th>Statement</th>
-                <th>Strongly Agree</th>
-                <th>Agree</th>
-                <th>Neither Agree nor Disagree</th>
-                <th>Disagree</th>
-                <th>Strongly Disagree</th>
-                <th>Don't Know / Not Applicable</th>
-            </tr>
-            <tr>
-                <td>My course is current</td>
-                <td><input type="radio" name="question3_current" value="Strongly Agree"></td>
-                <td><input type="radio" name="question3_current" value="Agree"></td>
-                <td><input type="radio" name="question3_current" value="Neither Agree nor Disagree"></td>
-                <td><input type="radio" name="question3_current" value="Disagree"></td>
-                <td><input type="radio" name="question3_current" value="Strongly Disagree"></td>
-                <td><input type="radio" name="question3_current" value="Don't Know / Not Applicable"></td>
-            </tr>
-            <tr>
-                <td>My course is well designed</td>
-                <td><input type="radio" name="question3_designed" value="Strongly Agree"></td>
-                <td><input type="radio" name="question3_designed" value="Agree"></td>
-                <td><input type="radio" name="question3_designed" value="Neither Agree nor Disagree"></td>
-                <td><input type="radio" name="question3_designed" value="Disagree"></td>
-                <td><input type="radio" name="question3_designed" value="Strongly Disagree"></td>
-                <td><input type="radio" name="question3_designed" value="Don't Know / Not Applicable"></td>
-            </tr>
-            <tr>
-                <td>My course aligns with my learning outcomes</td>
-                <td><input type="radio" name="question3_aligned" value="Strongly Agree"></td>
-                <td><input type="radio" name="question3_aligned" value="Agree"></td>
-                <td><input type="radio" name="question3_aligned" value="Neither Agree nor Disagree"></td>
-                <td><input type="radio" name="question3_aligned" value="Disagree"></td>
-                <td><input type="radio" name="question3_aligned" value="Strongly Disagree"></td>
-                <td><input type="radio" name="question3_aligned" value="Don't Know / Not Applicable"></td>
-            </tr>
-            <tr>
-                <td>My course has a good balance of theory and practice</td>
-                <td><input type="radio" name="question3_balance" value="Strongly Agree"></td>
-                <td><input type="radio" name="question3_balance" value="Agree"></td>
-                <td><input type="radio" name="question3_balance" value="Neither Agree nor Disagree"></td>
-                <td><input type="radio" name="question3_balance" value="Disagree"></td>
-                <td><input type="radio" name="question3_balance" value="Strongly Disagree"></td>
-                <td><input type="radio" name="question3_balance" value="Don't Know / Not Applicable"></td>
-            </tr>
-        </table><br><br>
+    
+        <label>3. Please rate your level of agreement with the following statements about your course or research program.</label>
+            <table  border="1">
+                <tr>
+                    <th>Statement</th>
+                    <th>Strongly Agree</th>
+                    <th>Agree</th>
+                    <th>Neither Agree nor Disagree</th>
+                    <th>Disagree</th>
+                    <th>Strongly Disagree</th>
+                    <th>Don't Know / Not Applicable</th>
+                </tr>
+                <tr>
+                    <td>My course is current</td>
+                    <td><input type="radio" name="question3_current" value="Strongly Agree"></td>
+                    <td><input type="radio" name="question3_current" value="Agree"></td>
+                    <td><input type="radio" name="question3_current" value="Neither Agree nor Disagree"></td>
+                    <td><input type="radio" name="question3_current" value="Disagree"></td>
+                    <td><input type="radio" name="question3_current" value="Strongly Disagree"></td>
+                    <td><input type="radio" name="question3_current" value="Don't Know / Not Applicable"></td>
+                </tr>
+                <tr>
+                    <td>My course is well designed</td>
+                    <td><input type="radio" name="question3_designed" value="Strongly Agree"></td>
+                    <td><input type="radio" name="question3_designed" value="Agree"></td>
+                    <td><input type="radio" name="question3_designed" value="Neither Agree nor Disagree"></td>
+                    <td><input type="radio" name="question3_designed" value="Disagree"></td>
+                    <td><input type="radio" name="question3_designed" value="Strongly Disagree"></td>
+                    <td><input type="radio" name="question3_designed" value="Don't Know / Not Applicable"></td>
+                </tr>
+                <tr>
+                    <td>My course aligns with my learning outcomes</td>
+                    <td><input type="radio" name="question3_aligned" value="Strongly Agree"></td>
+                    <td><input type="radio" name="question3_aligned" value="Agree"></td>
+                    <td><input type="radio" name="question3_aligned" value="Neither Agree nor Disagree"></td>
+                    <td><input type="radio" name="question3_aligned" value="Disagree"></td>
+                    <td><input type="radio" name="question3_aligned" value="Strongly Disagree"></td>
+                    <td><input type="radio" name="question3_aligned" value="Don't Know / Not Applicable"></td>
+                </tr>
+                <tr>
+                    <td>My course has a good balance of theory and practice</td>
+                    <td><input type="radio" name="question3_balance" value="Strongly Agree"></td>
+                    <td><input type="radio" name="question3_balance" value="Agree"></td>
+                    <td><input type="radio" name="question3_balance" value="Neither Agree nor Disagree"></td>
+                    <td><input type="radio" name="question3_balance" value="Disagree"></td>
+                    <td><input type="radio" name="question3_balance" value="Strongly Disagree"></td>
+                    <td><input type="radio" name="question3_balance" value="Don't Know / Not Applicable"></td>
+                </tr>
+            </table>
+        <br><br>
 
-        <label for="reason2">4. If you did not agree with any of the above statements or if you have any practical suggestions for how your course could be improved, please provide brief details in the space below.</label><br>
-        <textarea name="reason2" id="reason2"></textarea><br><br><br>
+         <div>
+            <label for="reason2">4. If you did not agree with any of the above statements or if you have suggestions for improvement, please provide details.</label>
+            <textarea name="reason2" id="reason2"></textarea>
+        </div>
 
         <label>5. Apart from your family, with whom do you usually spend time with in a social setting? <i>[Please select all that apply]</i></label><br><br>
 
@@ -118,6 +125,7 @@
 
     </form>
 
-    
+    <script src="script.js"></script>
+
 </body>
 </html>
