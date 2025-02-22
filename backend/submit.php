@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = null;
 
         // Redirect to the frontend page after successful submission
-        header("Location: ../frontend/survey.html");
+        header("Location: ../frontend/check.html");
         exit(); // 
 
     } catch (PDOException $e) {
@@ -35,6 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 } else {
-    header("Location: ../frontend/survey.html");
+    header("Location: ../frontend/check.html");
     exit();
 }

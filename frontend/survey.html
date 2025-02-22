@@ -16,8 +16,8 @@
 
        <div>
         <label>1. Did you participate in an Introductory Academic Program (IAP)?</label><br>
-        <label><input type="radio" name="question1" value="yes" required> Yes</label><br>
-        <label><input type="radio" name="question1" value="no" required> No</label>
+        <label><input type="radio" name="question1" value="Yes" required> Yes</label><br>
+        <label><input type="radio" name="question1" value="No" required> No</label>
     </div>
 
     <!-- Question 2 (Hidden by Default) -->
@@ -99,9 +99,12 @@
         <input type="checkbox" name="question5[]" value="People from my study country who are not students">
         <label for="StudyCountryNotStud">People from my study country who are not students</label><br>
 
-        <input type="checkbox" name="question5[]" value="Other">
+        <!-- <input type="checkbox" name="question5[]" value="Other">
         <label for="othersocial">Other <i>[Please specify]</i></label><br>
-        <textarea name="other_social" id="othersocial"></textarea><br><br>
+        <textarea name="other_social" id="othersocial"></textarea><br><br> -->
+
+        <label for="other">Other <i>[Please specify]</i></label>
+        <textarea name="question5[]" id="other"></textarea><br><br>
 
 
         <label for="state">6. Which State/Territory do you live in?</label><br>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORIMA Survey</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <img src="/img/Orima_Logo.png" alt="">
+        <h1>ORIMA Example Survey</h1>
+        <hr>
+        <h2>Facilities and services at your Australian educational institution</h2>
+    </header>
+
+    <form action="sample.php" method="post">
+
+       <!--Question 1 -->
+        <div id="question1Container">
+            <p>1. Did you participate in an Introductory Academic Program(IAP)?</p>
+            <input type="radio" name="question1" id="question1Yes">
+            <label for="question1Yes">Yes</label><br>
+            <input type="radio" name="question1" id="question1No">
+            <label for="question1No">No</label>
+        </div><br>
+
+        <!--Question 2 -->
+        <div id="question2Container">
+            <label for="question2">2. If not, please explain the reason.</label><br>
+            <textarea name="reason_for_not_attending_iap" id="question2"></textarea>
+        </div><br>
+
+        <!--Question 3 -->
+        <div>
+            <label>3. Please rate your level of agreement with the following statements about your course or research program.</label>
+        
+            <table border="1">
+                <tr>
+                    <th>My course/curriculum...</th>
+                    <th>Strongly Agree</th>
+                    <th>Agree</th>
+                    <th>Neither Agree nor Disagree</th>
+                    <th>Disagree</th>
+                    <th>Strongly Disagree</th>
+                    <th>Don't Know/Not Applicable</th>
+                </tr>
+                <tr>
+                    <td>a. is current</td>
+                    <td><input type="radio" name="question3_current" id="" value="Strongly Agree"></td>
+                    <td><input type="radio" name="question3_current" id="" value="Agree"></td>
+                    <td><input type="radio" name="question3_current" id="" value="Neither Agree not Disagree"></td>
+                    <td><input type="radio" name="question3_current" id="" value="Disagree"></td>
+                    <td><input type="radio" name="question3_current" id="" value="Strongly Disagree"></td>
+                    <td><input type="radio" name="question3_current" id="" value="Don't Know/Not Applicable"></td>
+                </tr>
+                <tr>
+                    <td>b. is well designed</td>
+                    <td><input type="radio" name="question3_designed" id="" value="Strongly Agree"></td>
+                    <td><input type="radio" name="question3_designed" id="" value="Agree"></td>
+                    <td><input type="radio" name="question3_designed" id="" value="Neither Agree not Disagree"></td>
+                    <td><input type="radio" name="question3_designed" id="" value="Disagree"></td>
+                    <td><input type="radio" name="question3_designed" id="" value="Strongly Disagree"></td>
+                    <td><input type="radio" name="question3_designed id="" value="Don't Know/Not Applicable"></td>
+                </tr>
+                <tr>
+                    <td>c. is wekk aligned with the learning and development outcomes I am seeking</td>
+                    <td><input type="radio" name="question3_aligned" id="" value="Strongly Agree"></td>
+                    <td><input type="radio" name="question3_aligned" id="" value="Agree"></td>
+                    <td><input type="radio" name="question3_aligned" id="" value="Neither Agree not Disagree"></td>
+                    <td><input type="radio" name="question3_aligned" id="" value="Disagree"></td>
+                    <td><input type="radio" name="question3_aligned" id="" value="Strongly Disagree"></td>
+                    <td><input type="radio" name="question3_aligned" id="" value="Don't Know/Not Applicable"></td>
+                </tr>
+                <tr>
+                    <td>d. has a good balance of theoretical and practical component</td>
+                    <td><input type="radio" name="question3_balance" id="" value="Strongly Agree"></td>
+                    <td><input type="radio" name="question3_balance" id="" value="Agree"></td>
+                    <td><input type="radio" name="question3_balance" id="" value="Neither Agree not Disagree"></td>
+                    <td><input type="radio" name="question3_balance" id="" value="Disagree"></td>
+                    <td><input type="radio" name="question3_balance" id="" value="Strongly Disagree"></td>
+                    <td><input type="radio" name="question3_balance" id="" value="Don't Know/Not Applicable"></td>
+                </tr>
+            </table>
+        </div><br>
+
+        <!--Question 4 -->
+        <div>
+            <label for="question4">4. If you did not agree with any of the above statements or if you have any practical suggestions for how your course could be improved, please provide brief details in the space below.</label><br>
+            <textarea name="reason_why_disagree" id="question4"></textarea>
+        </div><br>
+
+        <!--Question 5-->
+        <div>
+            <label for="">5. Apart from your family, with whom do you usually spend time with in a social setting? <i>[Please select all that apply]</i></label><br>
+
+            <input type="checkbox" name="question5[]" id="cbox1">
+            <label for="cbox1">Students from my home country</label><br>
+
+            <input type="checkbox" name="question5[]" id="cbox2">
+            <label for="cbox2">Other international students, but not from my home country</label><br>
+
+            <input type="checkbox" name="question5[]" id="cbox3">
+            <label for="cbox3">Students from my study country</label><br>
+
+            <input type="checkbox" name="question5[]" id="cbox4">
+            <label for="cbox4">People from my home country who are not students</label><br>
+
+            <input type="checkbox" name="question5[]" id="cbox5">
+            <label for="cbox5">People from my study country who are not students</label><br>
+
+            <label for="other">Other <i>[Please specify]</i></label>
+            <textarea name="question5[]" id="other"></textarea>
+            
+
+            <!-- <input type="checkbox" name="question5[]" id="other">
+            <label for="other">Other <i>[Please specify]</i></label><br>
+            <textarea name="question5[]" id="other"></textarea> -->
+        </div><br>
+
+        <!--Question 6-->
+        <div>
+            <label for="question6">6. Which State/Territory do you live in?</label><br>
+
+            <select name="state" id="question6">
+                <option value="">Please select ...</option>
+                <option value="ACT">ACT</option>
+                <option value="NSW">NSW</option>
+                <option value="NT">NT</option>
+                <option value="QLD">QLD</option>
+                <option value="SA">SA</option>
+                <option value="VIC">VIC</option>
+                <option value="WA">WA</option>
+            </select>
+        </div><br>
+
+         <!--Question 7-->
+         <div>
+            <label for="question7">7. Please enter your postcode</label><br>
+            <input type="text" name="postcode" id="question7">
+         </div>
+
+         <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
